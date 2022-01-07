@@ -1,3 +1,7 @@
+@import "layout/header";
+@import "layout/bgImage";
+@import "layout/button";
+
 $cwhite: white;
 $cBlue: rgb(0, 174, 255);
 
@@ -26,20 +30,26 @@ $cBlue: rgb(0, 174, 255);
   } 
 
   & .nav-list{
-    display: flex;
+    @extend .nav;
     gap: 10px;
-    font-size: 15px;
-    list-style: none;
+
+    & li{
+      cursor: pointer;
+
+      &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+    
   }
 
   & .contents{
     margin-top: 30px;
 
     &-menu{
-    display: flex;
+    @extend .nav;
     gap: 5px;
-    font-size: 15px;
-    list-style: none;
     padding: 0;
     
     & li:hover{
@@ -59,7 +69,82 @@ $cBlue: rgb(0, 174, 255);
     padding: 10px;
   }
 
+}
+
+.online-services{
+  background-image: url('../images/mike-benna-WHHY-iBp3aI-unsplash.jpg');
+  height: 500px;
+  @extend .bg-img;
+  display: grid;
+  align-items: center;
+
+  &-wrap{
+    display: grid;
+    width: 70%;
+    height: 380px;
+    margin: 0 auto;
+    background: $cBlue;
+    opacity: 0.95;
+    align-items: center;
+    padding: 0 40px;
+
+    & .services{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      height: 250px;
+
+      &_wrap{
+        color: white;
+        padding: 10px 0; 
+        border-right: 1px solid $cwhite;
+        
+        &:hover{
+          background: $cwhite;
+          opacity: 1;
+          color: $cBlue;
+          transition: all 0.3s ease-in-out;
+      }
+
+      &:last-child{
+        border-right: none;
+      }
+
+      h3{
+        text-align: center;
+      }
+
+
+    }
+
+    &-list{
+      list-style: none;
+      padding-top: 30px;
+      text-decoration: none;
+      
+    }
+  }
+
+  & .services-more{
+  border: 1px solid $cwhite;
+  color: white;
+  @extend .button-wrap;
+
+  &:hover{
+    background: $cwhite;
+    color: $cBlue;
+    transition: all 0.3 ease;
+  }
+
+  & button{
+    @extend .button;
   
+    &:hover{
+      color: $cBlue;
+    }
+  }
+}
 
 }
 
+}

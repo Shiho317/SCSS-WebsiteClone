@@ -1,3 +1,28 @@
+.nav, .header .nav-list, .header .contents-menu {
+  display: flex;
+  font-size: 15px;
+  list-style: none; }
+
+.bg-img, .online-services {
+  background-position: center;
+  background-size: cover;
+  width: 100%; }
+
+.button, .online-services-wrap .services-more button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 100%;
+  height: 100%; }
+
+.button-wrap, .online-services-wrap .services-more {
+  text-align: center;
+  width: 30%;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 auto; }
+
 * {
   margin: 0;
   box-sizing: border-box; }
@@ -17,17 +42,16 @@
     display: flex;
     justify-content: space-between; }
   .header .nav-list {
-    display: flex;
-    gap: 10px;
-    font-size: 15px;
-    list-style: none; }
+    gap: 10px; }
+    .header .nav-list li {
+      cursor: pointer; }
+      .header .nav-list li:hover {
+        text-decoration: underline;
+        cursor: pointer; }
   .header .contents {
     margin-top: 30px; }
     .header .contents-menu {
-      display: flex;
       gap: 5px;
-      font-size: 15px;
-      list-style: none;
       padding: 0; }
       .header .contents-menu li:hover {
         border-top: 2px solid gray;
@@ -39,3 +63,49 @@
     width: 100%;
     margin: 20px 0;
     padding: 10px; }
+
+.online-services {
+  background-image: url("../images/mike-benna-WHHY-iBp3aI-unsplash.jpg");
+  height: 500px;
+  display: grid;
+  align-items: center; }
+  .online-services-wrap {
+    display: grid;
+    width: 70%;
+    height: 380px;
+    margin: 0 auto;
+    background: #00aeff;
+    opacity: 0.95;
+    align-items: center;
+    padding: 0 40px; }
+    .online-services-wrap .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      height: 250px; }
+      .online-services-wrap .services_wrap {
+        color: white;
+        padding: 10px 0;
+        border-right: 1px solid white; }
+        .online-services-wrap .services_wrap:hover {
+          background: white;
+          opacity: 1;
+          color: #00aeff;
+          transition: all 0.3s ease-in-out; }
+        .online-services-wrap .services_wrap:last-child {
+          border-right: none; }
+        .online-services-wrap .services_wrap h3 {
+          text-align: center; }
+      .online-services-wrap .services-list {
+        list-style: none;
+        padding-top: 30px;
+        text-decoration: none; }
+    .online-services-wrap .services-more {
+      border: 1px solid white;
+      color: white; }
+      .online-services-wrap .services-more:hover {
+        background: white;
+        color: #00aeff;
+        transition: all 0.3 ease; }
+      .online-services-wrap .services-more button:hover {
+        color: #00aeff; }
