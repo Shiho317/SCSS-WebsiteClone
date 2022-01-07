@@ -1,0 +1,23 @@
+{
+  "name": "scss-websiteclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss/main.scss -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiho317/SCSS-WebsiteClone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shiho317/SCSS-WebsiteClone/issues"
+  },
+  "homepage": "https://github.com/Shiho317/SCSS-WebsiteClone#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
